@@ -1,0 +1,51 @@
+This guide is for changing the method of resampling for the Class imbalanced data problem.
+Either go to Imblearn official documentation or use the guide given below :
+
+******************************************************************************************
+
+
+1.Random Undersample
+
+	from imblearn.under_sampling import RandomUnderSampler
+	sampler=RandomUnderSampler(ratio=1.0)
+	train_x,train_y=sampler.fit_sample(x_data,x_label)
+
+2.SMOTE
+
+	from imblearn.over_sampling import SMOTE
+	sampler=SMOTE(ratio=1.0)
+	train_x,train_y=sampler.fit_sample(x_data,x_label)
+
+3. SMOTE-ENN
+
+	from imblearn.combine import SMOTEENN
+	sampler=SMOTEENN(ratio=1.0)
+	train_x,train_y=sampler.fit_sample(x_data,x_label)
+
+4.SMOTE - Tomek Links
+
+	from imblearn.combine import SMOTETomek
+	sampler=RandomUnderSampler(ratio=1.0)
+	train_x,train_y=sampler.fit_sample(x_data,x_label)
+
+5.Random Oversample
+
+	from imblearn.over_sampling import RandomOverSampler
+	sampler=RandomOverSampler(ratio=1.0)
+	train_x,train_y=sampler.fit_sample(x_data,x_label)
+
+6.Adaptive Synthetic
+
+	from imblearn.over_sampling import ADASYN
+	sampler=ADASYN(ratio=1.0)
+	train_x,train_y=sampler.fit_sample(x_data,x_label)
+
+
+***************************************************************************
+
+More parameters for these techniques and other Resampling techniques can be found at imblearn official documentation.
+
+
+
+
+
